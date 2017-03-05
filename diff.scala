@@ -4,6 +4,7 @@ import org.cvogt.scala.StringExtensions
 import java.util.UUID
 import org.cvogt.scala.debug.ThrowableExtensions
 import org.cvogt.scala.constraint.{CaseClass, SingletonObject, boolean}
+import scala.language.existentials
 
 object `package` {
   def red( s: String ) = Console.RED + s + Console.RESET
@@ -215,7 +216,7 @@ abstract class DiffShowInstances extends DiffShowInstances2 {
       val fields = hlistShow.value.diff( labelled to left, labelled to right ).toList.sortBy( _._1 ).map {
         case ( name, Different( value ) ) => Some( name -> value )
         case ( name, Error( value ) ) => Some( name -> value )
-        case ( name, Identical( _ ) )     => None
+        case ( _, _ )     => None
       }
       if ( fields.flatten.nonEmpty ) Different(
         constructorOption( getClassSimpleName(left.getClass), fields )

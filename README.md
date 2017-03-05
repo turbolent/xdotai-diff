@@ -8,10 +8,10 @@ Be aware: Collections (List, Seq, etc.) are compared like sets, i.e. ignoring or
 
 ### SBT Dependencies
 
-#### Scala 2.11
+#### Scala 2.12
 
 ```scala
-"ai.x" %% "diff" % "1.2.0"
+"com.turbolent" %% "xdot-diff" % "1.3.0"
 ```
 
 #### Scala 2.10

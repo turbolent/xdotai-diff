@@ -11,7 +11,7 @@ Be aware: Collections (List, Seq, etc.) are compared like sets, i.e. ignoring or
 #### Scala 2.12
 
 ```scala
-"com.turbolent" %% "xdot-diff" % "1.3.0"
+"com.turbolent" %% "xdotai-diff" % "1.3.0"
 ```
 
 #### Scala 2.10
